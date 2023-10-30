@@ -1,0 +1,29 @@
+CREATE TABLE Assignment
+(
+  AssigID VARCHAR(20) NOT NULL,
+  Title VARCHAR(20) NOT NULL,
+  Date DATE NOT NULL,
+  Description VARCHAR(1000),
+  DueDate DATE,
+  MaxMarks INT,
+  TopicId VARCHAR(30),
+  CId VARCHAR(10) NOT NULL,
+  TId VARCHAR(15) NOT NULL,
+  PRIMARY KEY (AssigID),
+  FOREIGN KEY (TId, CId) REFERENCES Teacher(TId, CourseId),
+  FOREIGN KEY (TopicId) REFERENCES Topic(TopicId)
+);
+
+
+
+CREATE TABLE Submission
+(
+  AssigId VARCHAR(20) NOT NULL,
+  UId VARCHAR(15) NOT NULL,
+  Content VARCHAR(1000),
+  Date DATE NOT NULL,
+  Grade VARCHAR(5),
+  PRIMARY KEY (AssigId, UId),
+  FOREIGN KEY (AssigID) REFERENCES Assignment(AssigID),
+  FOREIGN KEY (UId) REFERENCES User(UserId)
+);

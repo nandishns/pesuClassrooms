@@ -1,0 +1,22 @@
+CREATE TABLE User
+(
+  UserId VARCHAR(15) NOT NULL,
+  FirstName VARCHAR(20) NOT NULL,
+  LastName VARCHAR(20),
+  Password VARCHAR(30) NOT NULL,
+  Email VARCHAR(30) NOT NULL,
+  JoiningDate DATE NOT NULL,
+  PRIMARY KEY (UserId),
+  UNIQUE (Email)
+);
+
+
+CREATE TABLE Teacher
+(
+  TId VARCHAR(15) NOT NULL,
+  CourseId VARCHAR(10) NOT NULL,
+  Tid VARCHAR(15) NOT NULL,
+  PRIMARY KEY (TId, CourseId),
+  FOREIGN KEY (CourseId) REFERENCES Course(CourseId),
+  FOREIGN KEY (Tid) REFERENCES User(UserId)
+);

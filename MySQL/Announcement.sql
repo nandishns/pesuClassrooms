@@ -1,0 +1,40 @@
+CREATE TABLE Topic
+(
+  TopicId VARCHAR(20) NOT NULL,
+  Name VARCHAR(30) NOT NULL,
+  CId VARCHAR(10) NOT NULL,
+  PRIMARY KEY (TopicId),
+  FOREIGN KEY (CId) REFERENCES Course(CourseId)
+);
+
+
+
+CREATE TABLE Announcement
+(
+  AnnoId VARCHAR(20) NOT NULL,
+  Title VARCHAR(20) NOT NULL,
+  Date DATE NOT NULL,
+  Content VARCHAR(1000),
+  CId VARCHAR(10) NOT NULL,
+  TId VARCHAR(15) NOT NULL,
+  TopicId VARCHAR(20),
+  PRIMARY KEY (AnnoId),
+  FOREIGN KEY (TId, CId) REFERENCES Teacher(TId, CourseId),
+  FOREIGN KEY (TopicId) REFERENCES Topic(TopicId)
+);
+
+
+
+CREATE TABLE Comment
+(
+  CommId VARCHAR(20) NOT NULL,
+  Content VARCHAR(1000) NOT NULL,
+  Date DATE NOT NULL,
+  AnnoId VARCHAR(20),
+  AssigID VARCHAR(20),
+  UId VARCHAR(15) NOT NULL,
+  PRIMARY KEY (CommId),
+  FOREIGN KEY (AnnoId) REFERENCES Announcement(AnnoId),
+  FOREIGN KEY (AssigID) REFERENCES Assignment(AssigID),
+  FOREIGN KEY (UId) REFERENCES User(UserId)
+);

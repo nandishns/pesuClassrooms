@@ -1,0 +1,17 @@
+CREATE TABLE Course
+(
+  CourseId VARCHAR(10) NOT NULL,
+  Title VARCHAR(20) NOT NULL,
+  Description VARCHAR(100) NOT NULL,
+  PRIMARY KEY (CourseId)
+);
+
+CREATE TABLE Enrolment
+(
+  CourseId VARCHAR(10) NOT NULL,
+  UserId VARCHAR(15) NOT NULL,
+  CourseId VARCHAR(10) NOT NULL,
+  PRIMARY KEY (CourseId, UserId),
+  FOREIGN KEY (UserId) REFERENCES User(UserId),
+  FOREIGN KEY (CourseId) REFERENCES Course(CourseId)
+);

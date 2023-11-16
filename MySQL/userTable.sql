@@ -1,15 +1,14 @@
-CREATE TABLE User
+CREATE TABLE IF NOT EXISTS User
 (
-  UserId VARCHAR(15) NOT NULL,
+  UserId VARCHAR(30) NOT NULL,
   FirstName VARCHAR(20) NOT NULL,
   LastName VARCHAR(20),
-  Password VARCHAR(30) NOT NULL,
   Email VARCHAR(30) NOT NULL,
   JoiningDate DATE NOT NULL,
+  photoUrl VARCHAR(30) NOT NULL,
   PRIMARY KEY (UserId),
   UNIQUE (Email)
 );
-
 
 CREATE TABLE Teacher
 (

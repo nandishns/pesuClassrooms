@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDaWdX7XiXjd5btxP3G098dtDCQAoOOHws</string>
+	<key>GCM_SENDER_ID</key>
+	<string>891646450039</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.pesuclassrooms</string>
+	<key>PROJECT_ID</key>
+	<string>pesuclassroom</string>
+	<key>STORAGE_BUCKET</key>
+	<string>pesuclassroom.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:891646450039:ios:4cba6ff0d6b70a6d4da972</string>
+</dict>
+</plist>

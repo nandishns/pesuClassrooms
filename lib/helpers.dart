@@ -1,5 +1,8 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart' as http;
 
 const darkBlue = Color.fromARGB(23, 20, 32, 255);
 const lightWhite = Colors.white60;
@@ -36,5 +39,26 @@ class Style {
         fontSize: responsiveSize(20, context),
         letterSpacing: 0.2,
         color: color);
+  }
+}
+
+Future callLambdaFunction(apiEndpoint, requestData) async {
+  try {
+    var query = Uri(queryParameters: requestData).query;
+    var url = Uri.parse('$apiEndpoint?$query');
+    final response = await http.post(
+      url,
+      body: requestData,
+    );
+
+    if (response.statusCode == 200) {
+      debugPrint("*************LAMBDA-SUCCESS************");
+      return json.decode(response.body);
+    } else {
+      debugPrint(response.body);
+      debugPrint("*************LAMBDA-FAILED************");
+    }
+  } catch (e) {
+    throw Exception("$e");
   }
 }

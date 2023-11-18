@@ -8,7 +8,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 def join_class(event, context):
-    # Database connection
+
     connection = pymysql.connect(
         host=os.getenv("DATABASE_ENDPOINT"),
         user=os.getenv("USER_NAME"),
@@ -17,7 +17,7 @@ def join_class(event, context):
     )
     joinedAt = datetime.now().strftime('%Y-%m-%d')
 
-    # Check if query parameters are provided
+
     if 'queryStringParameters' in event and event['queryStringParameters']:
         queryParams = event['queryStringParameters']
         user_id = queryParams.get("UserId")

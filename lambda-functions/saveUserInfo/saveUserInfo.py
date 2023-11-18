@@ -16,7 +16,7 @@ def save_details(event, context):
     )
     logger.info("Received event: %s", event)
 
-    # Extract user details from the queryStringParameters
+
     if 'queryStringParameters' in event and event['queryStringParameters']:
         queryParams = event['queryStringParameters']
         UserId = queryParams.get("UserId")

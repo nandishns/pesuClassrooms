@@ -1,10 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:pesuclassrooms/Screens/classSection/view/classDetails.dart';
+import 'package:pesuclassrooms/Screens/createClass/controller/createClass.dart';
 import 'package:pesuclassrooms/helpers.dart';
-
-import '../controller/createClass.dart';
 
 class CreateClass extends StatefulWidget {
   const CreateClass({Key? key}) : super(key: key);
@@ -18,7 +14,12 @@ class _CreateClassState extends State<CreateClass> {
   String _className = '';
   String _description = '';
   bool isLoading = false;
-  String _section = '';
+
+  String? selectedSemester;
+  String? selectedSection;
+  String? isMembersAdded;
+  final List _bool = ["Yes", "No"];
+  // String? isAutomated;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,26 +48,16 @@ class _CreateClassState extends State<CreateClass> {
                 ),
               ),
               onPressed: () {
+                print("hey");
                 setState(() {
                   isLoading = true;
                 });
-                createClass(
-                        _formKey, _className, _description, _section, context)
+                createClass(_formKey, _className, _description, selectedSection,
+                        selectedSemester, context)
                     .then((value) {
                   setState(() {
                     isLoading = false;
                   });
-
-                  Navigator.pushReplacement(
-                      context,
-                      PageTransition(
-                          child: ClassDetails(
-                            className: _className,
-                            teacherId: FirebaseAuth.instance.currentUser!.uid,
-                            section: _section,
-                            subject: _section,
-                          ),
-                          type: PageTransitionType.leftToRight));
                 });
               },
               child: Text(
@@ -79,8 +70,11 @@ class _CreateClassState extends State<CreateClass> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const LinearProgressIndicator(
-              color: Colors.blueAccent,
+            Visibility(
+              visible: isLoading,
+              child: const LinearProgressIndicator(
+                color: Colors.blueAccent,
+              ),
             ),
             Form(
               key: _formKey,
@@ -106,10 +100,72 @@ class _CreateClassState extends State<CreateClass> {
                           const InputDecoration(labelText: 'Description'),
                       onSaved: (value) => _description = value ?? '',
                     ),
-                    TextFormField(
-                      decoration: const InputDecoration(labelText: 'Section'),
-                      onSaved: (value) => _section = value ?? '',
+                    verticalGap(context, 0.03),
+                    DropdownButtonFormField<String>(
+                      decoration: const InputDecoration(
+                        labelText: 'Select Semester',
+                        border: OutlineInputBorder(),
+                      ),
+                      value: selectedSemester,
+                      onChanged: (newValue) {
+                        setState(() {
+                          selectedSemester = newValue!;
+                        });
+                      },
+                      items: List.generate(8, (index) => (index + 1).toString())
+                          .map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
                     ),
+                    verticalGap(context, 0.03),
+                    DropdownButtonFormField<String>(
+                      decoration: const InputDecoration(
+                        labelText: 'Select Section',
+                        border: OutlineInputBorder(),
+                      ),
+                      value: selectedSection,
+                      onChanged: (newValue) {
+                        setState(() {
+                          selectedSection = newValue!;
+                        });
+                      },
+                      items: List.generate(
+                              13,
+                              (index) => String.fromCharCode(
+                                  'A'.codeUnitAt(0) + index))
+                          .map<DropdownMenuItem<String>>((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                    ),
+                    verticalGap(context, 0.03),
+                    // Visibility(
+                    //   visible: selectedSection != null,
+                    //   child: DropdownButtonFormField<String>(
+                    //     decoration: InputDecoration(
+                    //       labelText:
+                    //           'Do you want to add all $selectedSection students',
+                    //       border: const OutlineInputBorder(),
+                    //     ),
+                    //     value: isMembersAdded,
+                    //     onChanged: (newValue) {
+                    //       setState(() {
+                    //         isAutomated = newValue!;
+                    //       });
+                    //     },
+                    //     items: _bool.map<DropdownMenuItem<String>>((value) {
+                    //       return DropdownMenuItem(
+                    //         value: value,
+                    //         child: Text(value),
+                    //       );
+                    //     }).toList(),
+                    //   ),
+                    // ),
                   ],
                 ),
               ),

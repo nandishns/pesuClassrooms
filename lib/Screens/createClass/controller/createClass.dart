@@ -9,7 +9,7 @@ import '../../classSection/modal/model.dart';
 import '../../classSection/view/classDetails.dart';
 
 Future createClass(
-    formKey, className, description, section, sem, context) async {
+    formKey, className, description, section, sem, context, bgUrl) async {
   try {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
@@ -18,7 +18,8 @@ Future createClass(
         "description": description,
         "teacherId": FirebaseAuth.instance.currentUser?.uid,
         "section": section,
-        "sem": sem.toString()
+        "sem": sem.toString(),
+        "bgUrl": bgUrl
       };
       await callLambdaFunction(dotenv.env["CREATE_CLASS"], classDetails)
           .then((value) {
@@ -27,15 +28,15 @@ Future createClass(
         classId = value["classId"];
         classCode = value["classCode"];
         var classDetails = ClassDetail(
-          name: className,
-          description: description,
-          teacherId: FirebaseAuth.instance.currentUser!.uid,
-          classCode: classCode,
-          section: section,
-          classId: classId,
-          sem: sem,
-        );
-
+            name: className,
+            description: description,
+            teacherId: FirebaseAuth.instance.currentUser!.uid,
+            classCode: classCode,
+            section: section,
+            classId: classId,
+            sem: sem,
+            teacherName: "",
+            bgUrl: bgUrl);
         Navigator.pushReplacement(
             context,
             PageTransition(

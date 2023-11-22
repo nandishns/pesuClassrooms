@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:pesuclassrooms/Screens/createClass/controller/createClass.dart';
 import 'package:pesuclassrooms/helpers.dart';
@@ -11,17 +13,31 @@ class CreateClass extends StatefulWidget {
 
 class _CreateClassState extends State<CreateClass> {
   final _formKey = GlobalKey<FormState>();
-  String _className = '';
-  String _description = '';
   bool isLoading = false;
+  String? _className;
+  String? _description;
+  TextEditingController className = TextEditingController();
+  TextEditingController description = TextEditingController();
 
   String? selectedSemester;
   String? selectedSection;
   String? isMembersAdded;
-  final List _bool = ["Yes", "No"];
-  // String? isAutomated;
+  final List bgImageList = [
+    "https://www.gstatic.com/classroom/themes/img_code.jpg",
+    "https://www.gstatic.com/classroom/themes/img_bookclub.jpg",
+    "https://www.gstatic.com/classroom/themes/img_learnlanguage.jpg",
+    "https://www.gstatic.com/classroom/themes/img_graduation.jpg",
+    "https://www.gstatic.com/classroom/themes/img_reachout.jpg",
+    "https://www.gstatic.com/classroom/themes/img_reachout.jpg",
+    "https://www.gstatic.com/classroom/themes/img_arts.jpg",
+    "https://www.gstatic.com/classroom/themes/Chemistry.jpg",
+    "https://www.gstatic.com/classroom/themes/Physics.jpg",
+    "https://www.gstatic.com/classroom/themes/img_learninstrument_thumb.jpg"
+  ];
+
   @override
   Widget build(BuildContext context) {
+    final randomImageUrl = bgImageList[Random().nextInt(bgImageList.length)];
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -48,12 +64,18 @@ class _CreateClassState extends State<CreateClass> {
                 ),
               ),
               onPressed: () {
-                print("hey");
                 setState(() {
                   isLoading = true;
                 });
-                createClass(_formKey, _className, _description, selectedSection,
-                        selectedSemester, context)
+
+                createClass(
+                        _formKey,
+                        className.text,
+                        description.text,
+                        selectedSection,
+                        selectedSemester,
+                        context,
+                        randomImageUrl)
                     .then((value) {
                   setState(() {
                     isLoading = false;
@@ -84,6 +106,7 @@ class _CreateClassState extends State<CreateClass> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     TextFormField(
+                      controller: className,
                       decoration: const InputDecoration(
                         labelText: 'Class Name',
                       ),
@@ -96,6 +119,7 @@ class _CreateClassState extends State<CreateClass> {
                       },
                     ),
                     TextFormField(
+                      controller: description,
                       decoration:
                           const InputDecoration(labelText: 'Description'),
                       onSaved: (value) => _description = value ?? '',

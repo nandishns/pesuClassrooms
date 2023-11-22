@@ -41,4 +41,4 @@ CREATE TABLE IF NOT EXISTS Enrollments (
 );
 ALTER TABLE Classes
 ADD CONSTRAINT FK_TeacherId
-FOREIGN KEY (TeacherId) REFERENCES User(UserId);
+FOREIGN  KEY (TeacherId) REFERENCES User(UserId);

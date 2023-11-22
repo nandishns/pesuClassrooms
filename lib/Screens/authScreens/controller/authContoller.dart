@@ -26,22 +26,9 @@ Future signInWithGoogle() async {
     assert(_user.uid == currentUser.uid);
     String? displayName = FirebaseAuth.instance.currentUser?.displayName;
 
-    String? firstName;
-    String? lastName;
-
-    if (displayName != null && displayName.contains(" ")) {
-      List<String> names = displayName.split(" ");
-      firstName = names[0];
-
-      lastName = names.length > 1 ? names.last : null;
-    } else {
-      firstName = displayName;
-    }
-
     final userDetails = {
       "UserId": FirebaseAuth.instance.currentUser?.uid,
-      "FirstName": firstName ?? "",
-      "LastName": lastName ?? "",
+      "FirstName": displayName ?? "",
       "Email": FirebaseAuth.instance.currentUser?.email,
       "JoiningDate": DateFormat('yyyy-MM-dd').format(DateTime.now()),
       "photoUrl": FirebaseAuth.instance.currentUser?.photoURL ?? ""

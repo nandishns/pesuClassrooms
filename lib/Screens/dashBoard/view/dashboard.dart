@@ -11,6 +11,7 @@ import 'package:pesuclassrooms/helpers.dart';
 
 import '../../AuthScreens/view/googleAuthScreen.dart';
 import '../../createClass/view/createClass.dart';
+import '../../joinClass/joinClass.dart';
 
 class DashBoard extends StatefulWidget {
   const DashBoard({Key? key}) : super(key: key);
@@ -214,23 +215,25 @@ class _DashBoardState extends State<DashBoard> {
               return Center(child: Text('Error: ${snapshot.error}'));
             }
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }
             if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return Center(child: Text('No classes found'));
+              return const Center(child: Text('No classes found'));
             }
             return ListView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 var classData = snapshot.data![index];
-
-                return Column(
-                  children: [
-                    Text("${classData["ClassName"]}"),
-                    Text("${classData["Description"]}"),
-                    Text("${classData["CreationDate"]}"),
-                    Text("${classData["ClassCode"]}")
-                  ],
+                return ClassCard(
+                  className: classData["ClassName"],
+                  teacherName: classData["TeacherName"] ?? "",
+                  classTime: classData["CreationDate"],
+                  section: classData["Section"],
+                  classId: classData["ClassId"],
+                  teacherId: classData["TeacherId"],
+                  sem: classData["Sem"],
+                  description: classData["Description"],
+                  classCode: classData["ClassCode"],
                 );
               },
             );
@@ -242,18 +245,12 @@ class _DashBoardState extends State<DashBoard> {
 
   Future<void> _fetchClasses() async {
     try {
-      final response = await callLambdaFunction(
-          dotenv.env["FETCH_CLASS_DETAILS"],
+      await callLambdaFunction(dotenv.env["FETCH_CLASS_DETAILS"],
           {"UserId": FirebaseAuth.instance.currentUser?.uid}).then((value) {
-        var classesList = value;
-        print(classesList);
-        _classesController.add(classesList);
+        _classesController.add(value);
       });
-      print(response.statusCode); // Accessing statusCode here
     } catch (e) {
       print(e.toString());
-      // Handle other errors, such as network errors
-      // _classesController.addError('Error: $e');
     }
   }
 }
@@ -280,9 +277,9 @@ void _showBottomSheet(BuildContext context) {
                 Navigator.push(
                     context,
                     PageTransition(
-                        child: const CreateClass(),
-                        type: PageTransitionType.rightToLeft,
-                        duration: const Duration(microseconds: 20)));
+                      child: const CreateClass(),
+                      type: PageTransitionType.rightToLeft,
+                    ));
               },
             ),
             ListTile(
@@ -295,14 +292,13 @@ void _showBottomSheet(BuildContext context) {
                 style: Style().description(context, Colors.black),
               ),
               onTap: () {
-                // Add your action for joining a class
                 Navigator.pop(context);
                 Navigator.push(
                     context,
                     PageTransition(
-                        child: const CreateClass(),
-                        type: PageTransitionType.rightToLeft,
-                        duration: const Duration(microseconds: 20)));
+                      child: const JoinClass(),
+                      type: PageTransitionType.rightToLeft,
+                    ));
               },
             ),
           ],

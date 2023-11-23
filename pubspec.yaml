@@ -47,6 +47,7 @@ dependencies:
   http:
   flutter_dotenv: ^5.1.0
   file_picker:
+  firebase_storage:
 
 
 dev_dependencies:

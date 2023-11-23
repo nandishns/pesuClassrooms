@@ -3,14 +3,20 @@ application
 INJECTED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\main\AndroidManifest.xml:2:5-32:19
 MERGED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-15:19
 MERGED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-21:19
 MERGED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-21:19
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:26:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\67b77dbf5f8f719f9e8bac0b6aa262e7\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\67b77dbf5f8f719f9e8bac0b6aa262e7\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:21:5-32:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:8:5-16:19
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\6886724b6e0a4a2778744d5c79d89c62\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:22:5-39:19
@@ -19,14 +25,14 @@ MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Nandish\.gradle\cache
 MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Nandish\.gradle\caches\transforms-3\90a44189080d805dafdaef07194c89ce\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\Nandish\.gradle\caches\transforms-3\161127029790752747d687049d0d994e\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\Nandish\.gradle\caches\transforms-3\161127029790752747d687049d0d994e\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:22:5-38:19
-MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:5:5-6:19
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\22cfc0078ef5c90ef4462e2bfb2e19f2\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\22cfc0078ef5c90ef4462e2bfb2e19f2\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\48d04ea117f1a970bbfa1438551437cc\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\48d04ea117f1a970bbfa1438551437cc\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\5b236b739c81569b8e315e762bf10dab\transformed\jetified-play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\5b236b739c81569b8e315e762bf10dab\transformed\jetified-play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\d4991646cada40870095e023df31f3e4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\d4991646cada40870095e023df31f3e4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:5:5-6:19
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\Nandish\.gradle\caches\transforms-3\2844f52b827cb7aa1eb15c1c661e7aa1\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\Nandish\.gradle\caches\transforms-3\2844f52b827cb7aa1eb15c1c661e7aa1\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:5:5-20
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\e5f879fe724eadde9a91216c52b6527c\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:20:5-24:19
@@ -52,13 +58,18 @@ INJECTED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\m
 INJECTED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
+MERGED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-23:12
 MERGED from [:sqflite] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:path_provider_android] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:google_sign_in_android] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\67b77dbf5f8f719f9e8bac0b6aa262e7\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:15:1-34:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:2:1-18:12
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\6886724b6e0a4a2778744d5c79d89c62\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:15:1-41:12
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\Nandish\.gradle\caches\transforms-3\2d9e96561965cd06b83657f327d54015\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:2:1-10:12
@@ -67,12 +78,12 @@ MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Nandish\.gradle\cache
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Nandish\.gradle\caches\transforms-3\0be4d62fb094f272753e218c7b85a247\transformed\jetified-appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Nandish\.gradle\caches\transforms-3\91f346d6e43196f0237bc1ed74b17d40\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\Nandish\.gradle\caches\transforms-3\161127029790752747d687049d0d994e\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\22cfc0078ef5c90ef4462e2bfb2e19f2\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\48d04ea117f1a970bbfa1438551437cc\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\7c2aad7ab604e896f3e549ec3393a928\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\Nandish\.gradle\caches\transforms-3\cb94b7acaf235a250c3c26eea51ea8be\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\5b236b739c81569b8e315e762bf10dab\transformed\jetified-play-services-fido-20.0.1\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\d4991646cada40870095e023df31f3e4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\Nandish\.gradle\caches\transforms-3\2844f52b827cb7aa1eb15c1c661e7aa1\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\e5f879fe724eadde9a91216c52b6527c\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Nandish\.gradle\caches\transforms-3\48b5f8c6763777b127476530c5ebb88e\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
@@ -128,8 +139,14 @@ INJECTED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\m
 INJECTED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\main\AndroidManifest.xml
 MERGED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:6:5-8:41
 MERGED from [:sqflite] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -140,8 +157,12 @@ MERGED from [:google_sign_in_android] C:\Users\Nandish\OneDrive\Desktop\pesuClas
 MERGED from [:google_sign_in_android] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:21:5-23:64
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:19:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\67b77dbf5f8f719f9e8bac0b6aa262e7\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\67b77dbf5f8f719f9e8bac0b6aa262e7\transformed\jetified-firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:18:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\6886724b6e0a4a2778744d5c79d89c62\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:19:5-44
@@ -158,10 +179,8 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Nandish\.gradle\caches
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Nandish\.gradle\caches\transforms-3\91f346d6e43196f0237bc1ed74b17d40\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\Nandish\.gradle\caches\transforms-3\161127029790752747d687049d0d994e\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:20.7.0] C:\Users\Nandish\.gradle\caches\transforms-3\161127029790752747d687049d0d994e\transformed\jetified-play-services-auth-20.7.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:4:5-44
-MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:4:5-44
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\22cfc0078ef5c90ef4462e2bfb2e19f2\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Nandish\.gradle\caches\transforms-3\22cfc0078ef5c90ef4462e2bfb2e19f2\transformed\jetified-firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\48d04ea117f1a970bbfa1438551437cc\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\48d04ea117f1a970bbfa1438551437cc\transformed\jetified-firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\7c2aad7ab604e896f3e549ec3393a928\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\7c2aad7ab604e896f3e549ec3393a928\transformed\jetified-play-services-auth-api-phone-18.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] C:\Users\Nandish\.gradle\caches\transforms-3\cb94b7acaf235a250c3c26eea51ea8be\transformed\jetified-play-services-auth-base-18.0.4\AndroidManifest.xml:5:5-44
@@ -170,6 +189,8 @@ MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Nandish\
 MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\5b236b739c81569b8e315e762bf10dab\transformed\jetified-play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\d4991646cada40870095e023df31f3e4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Nandish\.gradle\caches\transforms-3\d4991646cada40870095e023df31f3e4\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.1.0] C:\Users\Nandish\.gradle\caches\transforms-3\acc16f3efea1a4b5c888b64bd621f468\transformed\jetified-integrity-1.1.0\AndroidManifest.xml:4:5-44
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\Nandish\.gradle\caches\transforms-3\2844f52b827cb7aa1eb15c1c661e7aa1\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] C:\Users\Nandish\.gradle\caches\transforms-3\2844f52b827cb7aa1eb15c1c661e7aa1\transformed\jetified-play-services-tasks-18.0.2\AndroidManifest.xml:4:5-43
 MERGED from [com.google.android.gms:play-services-basement:18.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\e5f879fe724eadde9a91216c52b6527c\transformed\jetified-play-services-basement-18.2.0\AndroidManifest.xml:18:5-43
@@ -250,16 +271,24 @@ MERGED from [:google_sign_in_android] C:\Users\Nandish\OneDrive\Desktop\pesuClas
 MERGED from [:google_sign_in_android] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\google_sign_in_android\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:24:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\Nandish\.gradle\caches\transforms-3\2d9e96561965cd06b83657f327d54015\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\Nandish\.gradle\caches\transforms-3\2d9e96561965cd06b83657f327d54015\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:7:5-67
 	android:name
 		ADDED from C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\android\app\src\debug\AndroidManifest.xml:6:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-14:19
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:66:9-72:19
 MERGED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:22:9-31:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:9:9-15:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:9:9-15:19
 MERGED from [com.google.firebase:firebase-common:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\6886724b6e0a4a2778744d5c79d89c62\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:30:9-38:19
@@ -278,12 +307,36 @@ ADDED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\bui
 		ADDED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_auth] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_storage] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-126
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
 ADDED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-13:85
 	android:value
 		ADDED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:13:17-82
 	android:name
 		ADDED from [:firebase_core] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\firebase_core\intermediates\merged_manifest\debug\AndroidManifest.xml:12:17-124
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:9:5-11:38
+	android:maxSdkVersion
+		ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-35
+	android:name
+		ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-64
+queries
+ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-19:15
+intent#action:name:android.intent.action.GET_CONTENT+data:mimeType:*/*
+ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:14:9-18:18
+action#android.intent.action.GET_CONTENT
+ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:13-72
+	android:name
+		ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:15:21-69
+data
+ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-44
+	android:mimeType
+		ADDED from [:file_picker] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\file_picker\intermediates\merged_manifest\debug\AndroidManifest.xml:17:19-41
 provider#com.crazecoder.openfile.FileProvider
 ADDED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:11:9-20:20
 	android:grantUriPermissions
@@ -304,6 +357,8 @@ ADDED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\o
 		ADDED from [:open_file] C:\Users\Nandish\OneDrive\Desktop\pesuClassrooms\build\open_file\intermediates\merged_manifest\debug\AndroidManifest.xml:18:17-67
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\Nandish\.gradle\caches\transforms-3\2d9e96561965cd06b83657f327d54015\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
 MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] C:\Users\Nandish\.gradle\caches\transforms-3\2d9e96561965cd06b83657f327d54015\transformed\jetified-recaptcha-18.1.2\AndroidManifest.xml:8:5-79
 	android:name
@@ -334,14 +389,6 @@ category#android.intent.category.BROWSABLE
 ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:39:17-78
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:39:27-75
-data
-ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:41:17-44:51
-	android:path
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:43:21-37
-	android:host
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:42:21-49
-	android:scheme
-		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:44:21-48
 activity#com.google.firebase.auth.internal.RecaptchaActivity
 ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:47:9-64:20
 	android:excludeFromRecents
@@ -362,6 +409,30 @@ ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\c
 		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:71:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:22.2.0] C:\Users\Nandish\.gradle\caches\transforms-3\9532c85a469b3a384ed7a8ef707b2105\transformed\jetified-firebase-auth-22.2.0\AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.3.0] C:\Users\Nandish\.gradle\caches\transforms-3\09d3abf7036a1d97bb4c3c1368ef1be0\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.1] C:\Users\Nandish\.gradle\caches\transforms-3\8a15a65224e0c8a0be10cb325eb956c2\transformed\jetified-firebase-appcheck-17.1.1\AndroidManifest.xml:29:17-117
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
 ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\Nandish\.gradle\caches\transforms-3\138fae865616e8005cd1bbc74f8920d8\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
 	android:value

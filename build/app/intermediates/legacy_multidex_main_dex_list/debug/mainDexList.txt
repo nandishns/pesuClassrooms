@@ -280,6 +280,9 @@ com/google/firebase/annotations/concurrent/Background.class
 com/google/firebase/annotations/concurrent/Blocking.class
 com/google/firebase/annotations/concurrent/Lightweight.class
 com/google/firebase/annotations/concurrent/UiThread.class
+com/google/firebase/appcheck/internal/NetworkClient$AttestationTokenType.class
+com/google/firebase/appcheck/ktx/FirebaseAppCheckKt.class
+com/google/firebase/appcheck/ktx/FirebaseAppCheckKtxRegistrar.class
 com/google/firebase/auth/ActionCodeResult$ActionDataKey.class
 com/google/firebase/auth/ActionCodeResult$Operation.class
 com/google/firebase/auth/ktx/AuthKt.class
@@ -287,6 +290,12 @@ com/google/firebase/ktx/FirebaseCommonKtxRegistrar.class
 com/google/firebase/ktx/FirebaseKt.class
 com/google/firebase/platforminfo/AutoValue_LibraryVersion.class
 com/google/firebase/platforminfo/LibraryVersion.class
+com/google/firebase/storage/StorageException$ErrorCode.class
+com/google/firebase/storage/ktx/FirebaseStorageKtxRegistrar.class
+com/google/firebase/storage/ktx/StorageKt.class
+com/google/firebase/storage/ktx/TaskState$InProgress.class
+com/google/firebase/storage/ktx/TaskState$Paused.class
+com/google/firebase/storage/ktx/TaskState.class
 com/google/j2objc/annotations/AutoreleasePool.class
 com/google/j2objc/annotations/J2ObjCIncompatible.class
 com/google/j2objc/annotations/ObjectiveCName.class

@@ -1,11 +1,13 @@
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:pesuclassrooms/Screens/createAssignment/controller.dart';
 
 import '../../helpers.dart';
 
 class CreateAssignment extends StatefulWidget {
-  const CreateAssignment({Key? key}) : super(key: key);
+  final int classId;
+  const CreateAssignment({Key? key, required this.classId}) : super(key: key);
 
   @override
   State<CreateAssignment> createState() => _CreateAssignmentState();
@@ -23,6 +25,8 @@ class _CreateAssignmentState extends State<CreateAssignment> {
   final TextEditingController _timeController = TextEditingController();
   final TextEditingController deductMarks = TextEditingController();
   final TextEditingController _controller = TextEditingController();
+  var checkBoxValue = false;
+  List<PlatformFile> attachments = [];
   Future<void> _selectTime(BuildContext context) async {
     TimeOfDay selectedTime = TimeOfDay.now();
     final TimeOfDay? pickedTime = await showTimePicker(
@@ -51,18 +55,21 @@ class _CreateAssignmentState extends State<CreateAssignment> {
     }
   }
 
-  Future<void> pickFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles();
+  Future<void> pickFiles() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles(
+      withData: true,
+      type: FileType.custom,
+      allowMultiple: true,
+      allowedExtensions: ["pdf"],
+    );
 
     if (result != null) {
-      PlatformFile file = result.files.first;
+      List<String> fileNames = result.files.map((file) => file.name).toList();
       setState(() {
-        _controller.text =
-            file.name; // Update the input field with the file name
+        _controller.text = fileNames.join(', ');
+        attachments = result.files;
       });
-    } else {
-      // User canceled the picker
-    }
+    } else {}
   }
 
   @override
@@ -76,7 +83,7 @@ class _CreateAssignmentState extends State<CreateAssignment> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Create class",
+          "Create Assignment",
         ),
         leading: IconButton(
           onPressed: () {
@@ -98,7 +105,10 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                   ),
                 ),
               ),
-              onPressed: () {
+              onPressed: () async {
+                setState(() {
+                  isLoading = true;
+                });
                 DateTime selectedDate =
                     parseDateFromString(_dateController.text);
                 TimeOfDay selectedTime =
@@ -107,18 +117,25 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                 DateTime combinedDateTime =
                     combineDateTimeWithTime(selectedDate, selectedTime);
                 String dateTimeForSql = formatDateTimeForSql(combinedDateTime);
+                List<String> attachmentUrls =
+                    await uploadFilesToFirebaseStorage(attachments);
+                String attachmentUrlsJson = attachmentUrls.toString();
 
-                setState(() {
-                  isLoading = true;
+                await createAssignment(
+                        marks.text,
+                        widget.classId,
+                        assignmentName.text,
+                        description.text,
+                        dateTimeForSql,
+                        checkBoxValue,
+                        int.parse(deductMarks.text),
+                        attachmentUrlsJson,
+                        context)
+                    .then((value) {
+                  setState(() {
+                    isLoading = false;
+                  });
                 });
-
-                // createClass(
-                //     )
-                //     .then((value) {
-                //   setState(() {
-                //     isLoading = false;
-                //   });
-                // });
               },
               child: Text(
                 "Assign",
@@ -146,12 +163,12 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                     TextFormField(
                       controller: assignmentName,
                       decoration: const InputDecoration(
-                        labelText: 'Class Name',
+                        labelText: 'Assignment Name',
                       ),
                       onSaved: (value) => _className = value ?? '',
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter class name';
+                          return 'Please enter Assignment name';
                         }
                         return null;
                       },
@@ -168,14 +185,6 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                       controller: marks,
                       keyboardType: TextInputType.phone,
                       decoration: const InputDecoration(labelText: 'Marks'),
-                      onSaved: (value) => _description = value ?? '',
-                    ),
-                    verticalGap(context, 0.01),
-                    TextFormField(
-                      controller: deductMarks,
-                      keyboardType: TextInputType.phone,
-                      decoration: const InputDecoration(
-                          labelText: 'Late Submission Deduction Marks'),
                       onSaved: (value) => _description = value ?? '',
                     ),
                     verticalGap(context, 0.01),
@@ -208,13 +217,37 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                     ),
                     TextFormField(
                       controller: _controller,
-                      readOnly: true, // Prevents keyboard from showing
-                      onTap:
-                          pickFile, // Opens file picker when the input box is tapped
-                      decoration: InputDecoration(
+                      readOnly: true,
+                      onTap: pickFiles,
+                      decoration: const InputDecoration(
                         labelText: 'Select File',
                         suffixIcon: Icon(Icons.attach_file),
                       ),
+                    ),
+                    verticalGap(context, 0.01),
+                    TextFormField(
+                      controller: deductMarks,
+                      keyboardType: TextInputType.phone,
+                      decoration: const InputDecoration(
+                          labelText: 'Late Submission Deduction Marks'),
+                      onSaved: (value) => _description = value ?? '',
+                    ),
+                    verticalGap(context, 0.02),
+                    Row(
+                      children: [
+                        Checkbox(
+                            value: checkBoxValue,
+                            onChanged: (value) {
+                              setState(() {
+                                checkBoxValue = value!;
+                              });
+                            }),
+                        Text(
+                          "Allow Late Submissions",
+                          style:
+                              TextStyle(fontSize: responsiveSize(20, context)),
+                        )
+                      ],
                     ),
                   ],
                 ),

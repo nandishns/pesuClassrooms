@@ -51,7 +51,9 @@ class Style {
 Future callLambdaFunction(apiEndpoint, requestData) async {
   try {
     var query = Uri(queryParameters: requestData).query;
+
     var url = Uri.parse('$apiEndpoint?$query');
+
     final response = await http.post(
       url,
       body: requestData,
@@ -201,8 +203,29 @@ DateTime parseDateFromString(String dateString) {
   return DateTime.parse(dateString);
 }
 
+// TimeOfDay parseTimeFromString(String timeString) {
+//   final hour = int.parse(timeString.split(":")[0]);
+//   final minute = int.parse(timeString.split(":")[1]);
+//   return TimeOfDay(hour: hour, minute: minute);
+// }
+
 TimeOfDay parseTimeFromString(String timeString) {
-  final hour = int.parse(timeString.split(":")[0]);
-  final minute = int.parse(timeString.split(":")[1]);
+  int hour, minute;
+  List<String> parts = timeString.split(' ');
+
+  if (parts.length == 2) {
+    List<String> timeParts = parts[0].split(':');
+    hour = int.parse(timeParts[0]);
+    minute = int.parse(timeParts[1]);
+
+    if (parts[1].toUpperCase() == 'PM' && hour != 12) {
+      hour = hour + 12;
+    } else if (parts[1].toUpperCase() == 'AM' && hour == 12) {
+      hour = 0;
+    }
+  } else {
+    throw FormatException('Invalid time format');
+  }
+
   return TimeOfDay(hour: hour, minute: minute);
 }

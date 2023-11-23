@@ -1,10 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
+import '../Screens/createAssignment/assignmentDetails.dart';
 import '../helpers.dart';
 
-Widget assignmentTile(assignmentName, postedOn, context) {
+Widget assignmentTile(assignmentName, maxMarks, dueDate, desc, attachments,
+    reduceMarks, assignmentId, isAdmin, context) {
   return ListTile(
-    onTap: () {},
+    onTap: () {
+      Navigator.push(
+          context,
+          PageTransition(
+              child: AssignmentDetails(
+                  maxMarks: maxMarks,
+                  dueDate: dueDate,
+                  desc: desc,
+                  title: assignmentName,
+                  attachment: attachments,
+                  isAdmin: isAdmin),
+              type: PageTransitionType.rightToLeft));
+    },
     leading: const CircleAvatar(
       backgroundColor: Colors.blueAccent,
       child: Icon(
@@ -13,11 +28,11 @@ Widget assignmentTile(assignmentName, postedOn, context) {
       ),
     ),
     title: Text(
-      "Assigment Name",
+      "$assignmentName",
       style: TextStyle(fontSize: responsiveSize(18, context)),
     ),
     subtitle: Text(
-      "Posted 18 Sept",
+      "Due on $dueDate",
       style:
           TextStyle(fontSize: responsiveSize(16, context), color: Colors.grey),
     ),

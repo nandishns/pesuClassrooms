@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:pesuclassrooms/Screens/classSection/view/classWork.dart';
@@ -22,6 +23,13 @@ class ClassDetails extends StatefulWidget {
 
 class _ClassDetailsState extends State<ClassDetails> {
   int _selectedIndex = 0;
+  late bool isAdmin;
+  @override
+  void initState() {
+    isAdmin =
+        FirebaseAuth.instance.currentUser?.uid == widget.classDetails.teacherId;
+    super.initState();
+  }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -35,8 +43,10 @@ class _ClassDetailsState extends State<ClassDetails> {
       Stream(
         classDetial: widget.classDetails,
       ),
-      const ClassWork(),
-      People(),
+      ClassWork(classId: widget.classDetails.classId, isAdmin: isAdmin),
+      People(
+        classID: widget.classDetails.classId,
+      ),
     ];
     return Scaffold(
       appBar: AppBar(
@@ -97,13 +107,17 @@ class _ClassDetailsState extends State<ClassDetails> {
         ),
       ),
       floatingActionButton: Visibility(
-        visible: _selectedIndex == 1,
+        visible: _selectedIndex == 1 &&
+            FirebaseAuth.instance.currentUser?.uid ==
+                widget.classDetails.teacherId,
         child: FloatingActionButton(
           onPressed: () {
             Navigator.push(
                 context,
                 PageTransition(
-                    child: const CreateAssignment(),
+                    child: CreateAssignment(
+                      classId: widget.classDetails.classId,
+                    ),
                     type: PageTransitionType.rightToLeft));
           },
           backgroundColor: Colors.blueAccent,

@@ -32,28 +32,28 @@ Future<void> createAssignment(
     "AttachmentURLs": attachments
   };
 
-  // try {
-  await callLambdaFunction2(dotenv.env['CREATE_ASSIGNMENT']!, params)
-      .then((value) {
-    Navigator.pop(context);
-    final snackBar = SnackBar(
-      elevation: 0,
-      behavior: SnackBarBehavior.floating,
-      backgroundColor: Colors.transparent,
-      content: AwesomeSnackbarContent(
-        title: 'Success!',
-        message: 'You have successfully created Assignment',
-        contentType: ContentType.success,
-      ),
-    );
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(snackBar);
-    debugPrint('Assignment created: ');
-  });
-  // } catch (e) {
-  //   print('Error creating assignment: $e');
-  // }
+  try {
+    await callLambdaFunction2(dotenv.env['CREATE_ASSIGNMENT']!, params)
+        .then((value) {
+      Navigator.pop(context);
+      final snackBar = SnackBar(
+        elevation: 0,
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Colors.transparent,
+        content: AwesomeSnackbarContent(
+          title: 'Success!',
+          message: 'You have successfully created Assignment',
+          contentType: ContentType.success,
+        ),
+      );
+      ScaffoldMessenger.of(context)
+        ..hideCurrentSnackBar()
+        ..showSnackBar(snackBar);
+      debugPrint('Assignment created: ');
+    });
+  } catch (e) {
+    print('Error creating assignment: $e');
+  }
 }
 
 Future<List<String>> uploadFilesToFirebaseStorage(
@@ -103,7 +103,7 @@ Future callLambdaFunction2(
     });
 
     var query = Uri(queryParameters: stringParams).query;
-    var url = Uri.parse('$apiEndpoint?$query');
+    var url = Uri.parse('$apiEndpoint?$query'.trim());
     print(url);
     final response = await http.post(
       url,

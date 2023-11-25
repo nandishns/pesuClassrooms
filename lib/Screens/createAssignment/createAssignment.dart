@@ -35,7 +35,6 @@ class _CreateAssignmentState extends State<CreateAssignment> {
     );
 
     if (pickedTime != null && pickedTime != selectedTime) {
-      // Format the picked time and update the controller
       _timeController.text = pickedTime.format(context);
     }
   }
@@ -117,10 +116,10 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                 DateTime combinedDateTime =
                     combineDateTimeWithTime(selectedDate, selectedTime);
                 String dateTimeForSql = formatDateTimeForSql(combinedDateTime);
-                List<String> attachmentUrls =
-                    await uploadFilesToFirebaseStorage(attachments);
+                List attachmentUrls = attachments.isNotEmpty
+                    ? await uploadFilesToFirebaseStorage(attachments)
+                    : [];
                 String attachmentUrlsJson = attachmentUrls.toString();
-
                 await createAssignment(
                         marks.text,
                         widget.classId,
@@ -211,7 +210,7 @@ class _CreateAssignmentState extends State<CreateAssignment> {
                       readOnly: true, // Prevents the keyboard from showing up
                       onTap: () {
                         FocusScope.of(context).requestFocus(
-                            new FocusNode()); // Prevents focus on the text field
+                            FocusNode()); // Prevents focus on the text field
                         _selectTime(context); // Call the time picker function
                       },
                     ),

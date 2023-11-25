@@ -67,7 +67,7 @@ class _JoinClassState extends State<JoinClass> {
                 });
 
                 joinClass(
-                  classCode,
+                  classCode.text,
                   context,
                 ).then((value) {
                   setState(() {

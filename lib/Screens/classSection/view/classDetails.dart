@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:pesuclassrooms/Screens/classSection/view/classWork.dart';
 import 'package:pesuclassrooms/Screens/classSection/view/people.dart';
@@ -137,20 +138,70 @@ void showClassDetailsPopup(BuildContext context, ClassDetail classDetails) {
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text(classDetails.name),
+        title: Text(
+          classDetails.name,
+          style: TextStyle(
+            fontSize: responsiveSize(24, context),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         content: SingleChildScrollView(
-          child: ListBody(
-            children: <Widget>[
-              Text('Description: ${classDetails.description}'),
-              Text('Section: ${classDetails.section}'),
-              Text('SEM: ${classDetails.sem}'),
-              Text('Class Code: ${classDetails.classCode}'),
-            ],
+          child: Container(
+            margin: EdgeInsets.all(responsiveSize(20, context)),
+            child: ListBody(
+              children: <Widget>[
+                Text(
+                  'Description: ${classDetails.description}',
+                  style: TextStyle(
+                    fontSize: responsiveSize(20, context),
+                  ),
+                ),
+                Text(
+                  'Section: ${classDetails.section}',
+                  style: TextStyle(
+                    fontSize: responsiveSize(20, context),
+                  ),
+                ),
+                Text(
+                  'SEM: ${classDetails.sem}',
+                  style: TextStyle(
+                    fontSize: responsiveSize(20, context),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        'Class Code: ${classDetails.classCode}',
+                        style: TextStyle(
+                            fontSize: responsiveSize(20, context),
+                            fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.copy),
+                      onPressed: () {
+                        Clipboard.setData(
+                                ClipboardData(text: classDetails.classCode))
+                            .then((_) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content:
+                                    Text('Class code copied to clipboard')),
+                          );
+                        });
+                      },
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
         actions: <Widget>[
           TextButton(
-            child: const Text('Close'),
+            child: Text('Close', style: TextStyle(color: Colors.blue)),
             onPressed: () {
               Navigator.of(context).pop();
             },

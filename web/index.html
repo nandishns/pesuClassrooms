@@ -38,6 +38,7 @@
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 </head>
 <body>
   <script>
@@ -54,6 +55,27 @@
         }
       });
     });
+
   </script>
+
 </body>
+<script>
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+<script>
+  var firebaseConfig = {
+    apiKey: "AIzaSyDjhrwkno-ngjfHf4iBUVGSJo9irp4F5nE",
+    authDomain: "pesuclassroom.firebaseapp.com",
+    projectId: "pesuclassroom",
+    storageBucket: "YOUR_STORAGE_BUCKET",
+    messagingSenderId: "891646450039",
+    appId: "1:891646450039:web:2cb944f2490a27014da972",
+    measurementId: "G-97EK47NHL2"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+
+</script>
 </html>

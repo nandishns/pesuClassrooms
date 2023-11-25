@@ -17,6 +17,7 @@ class People extends StatefulWidget {
 class _PeopleState extends State<People> {
   final StreamController<List<dynamic>> _membersController = StreamController();
   Stream get membersStream => _membersController.stream;
+  bool isLoading = false;
   @override
   void initState() {
     fetchParticipants(widget.classID);
@@ -24,14 +25,20 @@ class _PeopleState extends State<People> {
   }
 
   Future fetchParticipants(classId) async {
+    setState(() {
+      isLoading = true;
+    });
     final params = {"ClassId": classId};
     await callLambdaFunction2(dotenv.env["FETCH_PARTICIPANTS"]!, params)
         .then((value) {
-      print(value);
       _membersController.add(value);
+      setState(() {
+        isLoading = false;
+      });
     });
   }
 
+  @override
   void dispose() {
     super.dispose();
     _membersController.close();
@@ -39,16 +46,18 @@ class _PeopleState extends State<People> {
 
   @override
   Widget build(BuildContext context) {
-    return RefreshIndicator(
-      onRefresh: () => fetchParticipants(widget.classID),
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: RefreshIndicator(
+        onRefresh: () => fetchParticipants(widget.classID),
         child: Column(children: [
+          Visibility(
+              visible: isLoading, child: const LinearProgressIndicator()),
           StreamBuilder(
             stream:
                 _membersController.stream, // Replace with your class instance
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const CircularProgressIndicator(); // Show loading indicator
+                return Container();
               }
 
               if (snapshot.hasError) {
@@ -82,8 +91,10 @@ class _PeopleState extends State<People> {
                             fontSize: responsiveSize(18, context),
                             color: Colors.grey),
                       ),
-                      leading: CircleAvatar(
-                        backgroundImage: NetworkImage(details["photoURL"]),
+                      leading: Icon(
+                        Icons.account_circle,
+                        color: Colors.blueAccent,
+                        size: responsiveSize(52, context),
                       ),
                       // Add other details you want to display
                     );

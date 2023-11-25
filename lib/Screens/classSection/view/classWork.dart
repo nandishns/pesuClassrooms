@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:pesuclassrooms/utils/assignmentTile.dart';
@@ -20,6 +21,7 @@ class ClassWork extends StatefulWidget {
 class _ClassWorkState extends State<ClassWork> {
   final StreamController<List<dynamic>> _assignmentsController =
       StreamController();
+  bool isLoading = false;
   @override
   void initState() {
     fetchAssignments(widget.classId);
@@ -27,26 +29,36 @@ class _ClassWorkState extends State<ClassWork> {
   }
 
   Future fetchAssignments(classId) async {
-    final params = {"ClassId": classId};
+    setState(() {
+      isLoading = true;
+    });
+    final params = {
+      "ClassId": classId,
+      "UserId": FirebaseAuth.instance.currentUser?.uid
+    };
     await callLambdaFunction2(dotenv.env["FETCH_ASSIGNMENT"]!, params)
         .then((value) {
-      print(value);
       _assignmentsController.add(value);
+      setState(() {
+        isLoading = false;
+      });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return RefreshIndicator(
-      onRefresh: () => fetchAssignments(widget.classId),
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: RefreshIndicator(
+        onRefresh: () => fetchAssignments(widget.classId),
         child: Column(children: [
+          Visibility(
+              visible: isLoading, child: const LinearProgressIndicator()),
           StreamBuilder(
             stream: _assignmentsController
                 .stream, // Replace with your class instance
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const CircularProgressIndicator(); // Show loading indicator
+                return Container();
               }
 
               if (snapshot.hasError) {
@@ -68,20 +80,20 @@ class _ClassWorkState extends State<ClassWork> {
                     var dueDate = assignments[index]["DueDate"];
                     var assignmentId = assignments[index]["AssignmentId"];
                     var desc = assignments[index]["Description"];
-                    var reduceMarks = assignments[index]["ReduceMarks"];
-                    var attachments = assignments[index]["AttachmentURLs"];
-                    var maxMarks =
-                        int.parse(assignments[index]["MaxMarks"].toString());
+                    var submissionStatus = assignments[index]
+                                ["SubmissionStatus"] ==
+                            "Submission Due"
+                        ? "Due"
+                        : assignments[index]["SubmissionStatus"];
 
                     return assignmentTile(
                         "$title",
                         "$dueDate",
-                        maxMarks,
                         desc,
-                        attachments,
-                        reduceMarks,
                         assignmentId,
+                        submissionStatus,
                         widget.isAdmin,
+                        widget.classId,
                         context);
                   },
                 ),

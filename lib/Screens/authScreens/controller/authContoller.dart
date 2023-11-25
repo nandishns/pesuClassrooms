@@ -28,7 +28,7 @@ Future signInWithGoogle() async {
 
     final userDetails = {
       "UserId": FirebaseAuth.instance.currentUser?.uid,
-      "FirstName": displayName ?? "",
+      "Name": displayName ?? "",
       "Email": FirebaseAuth.instance.currentUser?.email,
       "JoiningDate": DateFormat('yyyy-MM-dd').format(DateTime.now()),
       "photoUrl": FirebaseAuth.instance.currentUser?.photoURL ?? ""

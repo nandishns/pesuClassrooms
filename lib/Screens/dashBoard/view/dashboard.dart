@@ -225,16 +225,16 @@ class _DashBoardState extends State<DashBoard> {
               itemBuilder: (context, index) {
                 var classData = snapshot.data![index];
                 return ClassCard(
-                  className: classData["ClassName"],
-                  teacherName: classData["TeacherName"] ?? "",
-                  classTime: classData["CreationDate"],
-                  section: classData["Section"],
-                  classId: classData["ClassId"],
-                  teacherId: classData["TeacherId"],
-                  sem: classData["Sem"],
-                  description: classData["Description"],
-                  classCode: classData["ClassCode"],
-                );
+                    className: classData["ClassName"],
+                    teacherName: classData["TeacherName"] ?? "",
+                    classTime: classData["CreationDate"],
+                    section: classData["Section"],
+                    classId: classData["ClassId"],
+                    teacherId: classData["TeacherId"],
+                    sem: classData["Sem"],
+                    description: classData["Description"],
+                    classCode: classData["ClassCode"],
+                    bgUrl: classData["bgUrl"]);
               },
             );
           },

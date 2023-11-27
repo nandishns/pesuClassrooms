@@ -1,6 +1,8 @@
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:pesuclassrooms/Screens/classSection/view/classWork.dart';
 import 'package:pesuclassrooms/Screens/classSection/view/people.dart';
@@ -8,6 +10,7 @@ import 'package:pesuclassrooms/Screens/classSection/view/stream.dart';
 import 'package:pesuclassrooms/Screens/createAssignment/createAssignment.dart';
 import 'package:pesuclassrooms/helpers.dart';
 
+import '../../createAssignment/controller.dart';
 import '../modal/model.dart';
 
 class ClassDetails extends StatefulWidget {
@@ -171,16 +174,17 @@ void showClassDetailsPopup(BuildContext context, ClassDetail classDetails) {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Expanded(
-                      child: Text(
-                        'Class Code: ${classDetails.classCode}',
-                        style: TextStyle(
-                            fontSize: responsiveSize(20, context),
-                            fontWeight: FontWeight.w500),
-                      ),
+                    Text(
+                      'Class Code: ${classDetails.classCode}',
+                      style: TextStyle(
+                          fontSize: responsiveSize(20, context),
+                          fontWeight: FontWeight.w500),
                     ),
                     IconButton(
-                      icon: Icon(Icons.copy),
+                      icon: Icon(
+                        Icons.copy,
+                        size: responsiveSize(30, context),
+                      ),
                       onPressed: () {
                         Clipboard.setData(
                                 ClipboardData(text: classDetails.classCode))
@@ -206,6 +210,36 @@ void showClassDetailsPopup(BuildContext context, ClassDetail classDetails) {
               Navigator.of(context).pop();
             },
           ),
+          Visibility(
+            visible: classDetails.teacherId ==
+                FirebaseAuth.instance.currentUser?.uid,
+            child: TextButton(
+                onPressed: () {
+                  final params = {"ClassId": classDetails.classId};
+                  callLambdaFunction2(dotenv.env["DELETE_CLASS"]!, params)
+                      .then((value) {
+                    Navigator.pop(context);
+                    Navigator.pop(context);
+                    final snackBar = SnackBar(
+                      elevation: 0,
+                      behavior: SnackBarBehavior.floating,
+                      backgroundColor: Colors.transparent,
+                      content: AwesomeSnackbarContent(
+                        title: 'Success!',
+                        message: 'You have successfully deleted class',
+                        contentType: ContentType.success,
+                      ),
+                    );
+                    ScaffoldMessenger.of(context)
+                      ..hideCurrentSnackBar()
+                      ..showSnackBar(snackBar);
+                  });
+                },
+                child: Text(
+                  "Delete",
+                  style: TextStyle(color: Colors.red),
+                )),
+          )
         ],
       );
     },

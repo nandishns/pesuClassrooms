@@ -64,6 +64,9 @@ class _AnnouncementState extends State<Announcement> {
                 ),
               ),
               onPressed: () async {
+                if (announcement.text == "") {
+                  return;
+                }
                 setState(() {
                   isLoading = true;
                 });

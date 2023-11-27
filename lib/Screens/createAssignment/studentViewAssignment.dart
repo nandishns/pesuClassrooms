@@ -40,6 +40,7 @@ class _StudentViewAssignmentState extends State<StudentViewAssignment> {
   @override
   void initState() {
     fetchAssignmentDetails();
+    submission = [];
     super.initState();
   }
 
@@ -296,6 +297,17 @@ class _StudentViewAssignmentState extends State<StudentViewAssignment> {
                   ),
                 ),
                 onPressed: () async {
+                  if (submission.isEmpty) {
+                    final snackbar = const SnackBar(
+                      backgroundColor: Colors.black,
+                      content: Text("Please attach a file"),
+                    );
+                    ScaffoldMessenger.of(context)
+                      ..hideCurrentSnackBar()
+                      ..showSnackBar(snackbar);
+
+                    return;
+                  }
                   setState(() {
                     isLoading = true;
                   });
@@ -315,7 +327,7 @@ class _StudentViewAssignmentState extends State<StudentViewAssignment> {
                       isLoading = false;
                     });
                     Navigator.pop(context);
-                    Navigator.pop(context);
+
                     final snackBar = SnackBar(
                       elevation: 0,
                       behavior: SnackBarBehavior.floating,

@@ -13,6 +13,7 @@ class GoogleAuthScreen extends StatefulWidget {
 }
 
 class _GoogleAuthScreenState extends State<GoogleAuthScreen> {
+  bool isLoading = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,6 +21,9 @@ class _GoogleAuthScreenState extends State<GoogleAuthScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            verticalGap(context, 0.06),
+            Visibility(
+                visible: isLoading, child: const LinearProgressIndicator()),
             verticalGap(context, 0.14),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +95,13 @@ class _GoogleAuthScreenState extends State<GoogleAuthScreen> {
                     ],
                   ))),
               onTap: () async {
+                setState(() {
+                  isLoading = true;
+                });
                 signInWithGoogle().then((user) {
+                  setState(() {
+                    isLoading = false;
+                  });
                   Navigator.pushReplacement(
                       context,
                       PageTransition(
@@ -136,7 +146,13 @@ class _GoogleAuthScreenState extends State<GoogleAuthScreen> {
                     ],
                   ))),
               onTap: () async {
+                setState(() {
+                  isLoading = true;
+                });
                 signInWithGoogle().then((user) {
+                  setState(() {
+                    isLoading = false;
+                  });
                   Navigator.push(
                       context,
                       PageTransition(

@@ -81,8 +81,11 @@ class _DetailedAnnouncementState extends State<DetailedAnnouncement> {
                     ),
                   ),
                   verticalGap(context, 0.005),
-                  AttachmentsList(
-                      attachments: widget.announcementAttachmentURLs)
+                  widget.announcementAttachmentURLs == null ||
+                          widget.announcementAttachmentURLs.isEmpty
+                      ? Container()
+                      : AttachmentsList(
+                          attachments: widget.announcementAttachmentURLs)
                 ],
               ),
             ),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:page_transition/page_transition.dart';
@@ -22,6 +23,7 @@ class Stream extends StatefulWidget {
 class _StreamState extends State<Stream> {
   bool isLoading = false;
   final StreamController _announcementController = StreamController();
+
   @override
   void initState() {
     fetchAnnouncements();
@@ -44,9 +46,11 @@ class _StreamState extends State<Stream> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: RefreshIndicator(
-        onRefresh: () => fetchAnnouncements(),
+    final bool isAdmin =
+        widget.classDetial.teacherId == FirebaseAuth.instance.currentUser?.uid;
+    return RefreshIndicator(
+      onRefresh: () => fetchAnnouncements(),
+      child: SingleChildScrollView(
         child: Column(
           children: [
             Visibility(
@@ -164,7 +168,8 @@ class _StreamState extends State<Stream> {
                             announcement['TeacherName'],
                             announcement['PostedDate'],
                             announcement['Description'],
-                            announcement["AnnouncementAttachmentURLs"]));
+                            announcement["AnnouncementAttachmentURLs"],
+                            isAdmin));
                   },
                 );
               },
@@ -175,7 +180,8 @@ class _StreamState extends State<Stream> {
     );
   }
 
-  Widget announcementTile(name, postedOn, content, announcementAttachmentURLs) {
+  Widget announcementTile(
+      name, postedOn, content, announcementAttachmentURLs, isAdmin) {
     return Ink(
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey.shade300),
@@ -232,6 +238,32 @@ class _StreamState extends State<Stream> {
                       ),
                     ],
                   ),
+
+                  // Visibility(
+                  //   visible: isAdmin,
+                  //   child: PopupMenuButton(itemBuilder: (context) {
+                  //     return [
+                  //       PopupMenuItem<int>(
+                  //         value: 0,
+                  //         child: Text(
+                  //           "Edit",
+                  //           style: Style().description(context, Colors.black),
+                  //         ),
+                  //       ),
+                  //       PopupMenuItem<int>(
+                  //         value: 0,
+                  //         child: Text(
+                  //           "Delete",
+                  //           style: Style().description(context, Colors.black),
+                  //         ),
+                  //       ),
+                  //     ];
+                  //   }, onSelected: (value) {
+                  //     if (value == 0) {
+                  //       //TODO: implement view deadlines
+                  //     }
+                  //   }),
+                  // )
                 ],
               ),
               verticalGap(context, 0.008),

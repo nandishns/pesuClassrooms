@@ -81,6 +81,7 @@ class ClassCard extends StatelessWidget {
   final String description;
   final String sem;
   final String classCode;
+  final String bgUrl;
   const ClassCard({
     Key? key,
     required this.className,
@@ -92,6 +93,7 @@ class ClassCard extends StatelessWidget {
     required this.sem,
     required this.description,
     required this.classCode,
+    required this.bgUrl,
   }) : super(key: key);
 
   @override
@@ -133,7 +135,7 @@ class ClassCard extends StatelessWidget {
           elevation: 2,
           margin: const EdgeInsets.all(8),
           child: CachedNetworkImage(
-            imageUrl: randomImageUrl,
+            imageUrl: bgUrl,
             imageBuilder: (context, imageProvider) => Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),

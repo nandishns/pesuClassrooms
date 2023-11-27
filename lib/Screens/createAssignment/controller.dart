@@ -104,7 +104,7 @@ Future callLambdaFunction2(
 
     var query = Uri(queryParameters: stringParams).query;
     var url = Uri.parse('$apiEndpoint?$query'.trim());
-    print(url);
+
     final response = await http.post(
       url,
       headers: {"Content-Type": "application/json"},

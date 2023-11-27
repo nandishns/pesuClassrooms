@@ -81,6 +81,7 @@ class _PeopleState extends State<People> {
                     var details = member[role.toLowerCase()];
 
                     return ListTile(
+                      onTap: () {},
                       title: Text(
                         details["name"],
                         style: TextStyle(fontSize: responsiveSize(21, context)),

@@ -10,8 +10,8 @@ class Correction extends StatefulWidget {
   final int submissionId;
   final List submissionAttachmentURL;
   final String name;
-  final String? grade;
-  final String? remark;
+  final grade;
+  final remark;
   final int hasTeacherCorrected;
   const Correction(
       {Key? key,
@@ -81,7 +81,8 @@ class _CorrectionState extends State<Correction> {
               ),
             ),
             verticalGap(context, 0.02),
-            widget.submissionAttachmentURL.isEmpty
+            widget.submissionAttachmentURL == null ||
+                    widget.submissionAttachmentURL.isEmpty
                 ? const Text("No submissionAttachment Available")
                 : AttachmentsList(attachments: widget.submissionAttachmentURL),
             verticalGap(context, 0.04),

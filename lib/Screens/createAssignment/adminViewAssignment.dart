@@ -111,6 +111,7 @@ class _InstructionsTabContentState extends State<InstructionsTabContent> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Visibility(
               visible: isLoading, child: const LinearProgressIndicator()),

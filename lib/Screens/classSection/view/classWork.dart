@@ -66,7 +66,7 @@ class _ClassWorkState extends State<ClassWork> {
               }
 
               if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return const Text('No members found');
+                return const Text('No Assignments found');
               }
 
               List assignments = snapshot.data!;
